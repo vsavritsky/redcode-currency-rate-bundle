@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 
 <container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
         <parameter key="redcode.currency.rate.class"></parameter>
@@ -11,14 +11,22 @@
 
     <services>
 
-        <service id="redcode.currency.rate.manager" class="RedCode\CurrencyRateBundle\Manager\CurrencyRateManager">
+        <service id="redcode.currency.rate.manager" class="RedCode\CurrencyRateBundle\Manager\CurrencyRateManager" public="true">
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument>%redcode.currency.rate.class%</argument>
         </service>
 
-        <service id="redcode.currency.manager" class="RedCode\CurrencyRateBundle\Manager\CurrencyManager">
+        <service id="redcode.currency.manager" class="RedCode\CurrencyRateBundle\Manager\CurrencyManager" public="true" >
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument>%redcode.currency.class%</argument>
+        </service>
+
+        <service id="redcode.currency.command.load" class="RedCode\CurrencyRateBundle\Command\LoadCurrencyRatesCommand">
+            <tag name="console.command" />
+        </service>
+
+        <service id="redcode.currency.command.create" class="RedCode\CurrencyRateBundle\Command\CreateBaseCurrenciesCommand">
+            <tag name="console.command" />
         </service>
 
         <service id="redcode.currency.rate.converter" class="RedCode\Currency\Rate\CurrencyConverter">
@@ -28,6 +36,8 @@
         </service>
 
         <service id="redcode.currency.rate.provider.factory" class="RedCode\Currency\Rate\Provider\ProviderFactory" />
+
+
 
     </services>
 
