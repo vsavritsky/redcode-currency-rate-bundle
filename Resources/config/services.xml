@@ -29,18 +29,6 @@
 
         <service id="redcode.currency.rate.provider.factory" class="RedCode\Currency\Rate\Provider\ProviderFactory" />
 
-        <service id="redcode.currency.rate.provider.rate" class="RedCode\Currency\Rate\Provider\CbrCurrencyRateProvider">
-            <argument type="service" id="redcode.currency.rate.manager" />
-            <argument type="service" id="redcode.currency.manager" />
-            <tag name="redcode.currency.rate.provider" />
-        </service>
-
-        <service id="redcode.currency.rate.provider.ecb_rate" class="RedCode\Currency\Rate\Provider\EcbCurrencyRateProvider">
-            <argument type="service" id="redcode.currency.rate.manager" />
-            <argument type="service" id="redcode.currency.manager" />
-            <tag name="redcode.currency.rate.provider" />
-        </service>
-
     </services>
 
 </container>
