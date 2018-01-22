@@ -2,6 +2,7 @@
 
 namespace RedCode\CurrencyRateBundle\Command;
 
+use RedCode\Currency\Rate\Exception\ProviderNotFoundException;
 use RedCode\Currency\Rate\ICurrencyRate;
 use RedCode\Currency\Rate\Provider\ICurrencyRateProvider;
 use RedCode\Currency\Rate\Provider\ProviderFactory;
@@ -11,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Security\Core\Exception\ProviderNotFoundException;
+
 
 /**
  * @author maZahaca
