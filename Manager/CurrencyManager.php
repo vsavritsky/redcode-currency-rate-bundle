@@ -21,6 +21,12 @@ class CurrencyManager implements ICurrencyManager
      */
     private $currencyClassName;
 
+    /**
+     * CurrencyManager constructor.
+     * @param EntityManager $em
+     * @param $currencyClassName
+     * @throws \Exception
+     */
     public function __construct(EntityManager $em, $currencyClassName)
     {
         $this->em = $em;
@@ -44,6 +50,8 @@ class CurrencyManager implements ICurrencyManager
 
     /**
      * @param $code
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
      */
     public function addCurrency($code)
     {

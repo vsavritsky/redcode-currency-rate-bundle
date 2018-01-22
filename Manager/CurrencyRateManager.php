@@ -23,6 +23,12 @@ class CurrencyRateManager implements ICurrencyRateManager
      */
     private $currencyRateClassName;
 
+    /**
+     * CurrencyRateManager constructor.
+     * @param EntityManager $em
+     * @param $currencyRateClassName
+     * @throws \Exception
+     */
     public function __construct(EntityManager $em, $currencyRateClassName)
     {
         $this->em = $em;
