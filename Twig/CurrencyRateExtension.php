@@ -33,7 +33,7 @@ class CurrencyRateExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction(
+            new \Twig_Function(
                 'rc_currency_convert',
                 function ($twigOptions, $from, $to, $value, $provider = null) {
                     return $this->converter->convert(
