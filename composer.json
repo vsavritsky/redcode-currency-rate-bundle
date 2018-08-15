@@ -1,5 +1,5 @@
 {
-    "name": "waylandace/currency-rate-bundle",
+    "name": "savritsky/currency-rate-bundle",
     "type": "symfony-bundle",
     "description": "Symfony4 currency rate bundle, allows convert currencies and load rates via cbr or ecb provider",
     "keywords": ["currency", "rate", "converter", "loader", "symfony", "bundle", "cbr.ru", "www.ecb.europa.eu"],
