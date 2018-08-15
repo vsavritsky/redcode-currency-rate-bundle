@@ -29,7 +29,7 @@
             <tag name="console.command" />
         </service>
 
-        <service id="redcode.currency.rate.converter" class="RedCode\Currency\Rate\CurrencyConverter">
+        <service id="redcode.currency.rate.converter" class="RedCode\Currency\Rate\CurrencyConverter" public="true">
             <argument type="service" id="redcode.currency.rate.provider.factory" />
             <argument type="service" id="redcode.currency.rate.manager" />
             <argument type="service" id="redcode.currency.manager" />
