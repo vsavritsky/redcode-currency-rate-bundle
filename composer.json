@@ -1,7 +1,7 @@
 {
     "name": "savritsky/currency-rate-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony4 currency rate bundle, allows convert currencies and load rates via cbr or ecb provider",
+    "description": "Symfony5+ currency rate bundle, allows convert currencies and load rates via cbr or ecb provider",
     "keywords": ["currency", "rate", "converter", "loader", "symfony", "bundle", "cbr.ru", "www.ecb.europa.eu"],
     "homepage": "https://github.com/maZahaca/redcode-currency-rate-bundle",
     "license": "MIT",
@@ -14,11 +14,11 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": ">=7.0.0",
-        "symfony/console": "^4.0",
-        "symfony/event-dispatcher": "^4.0",
-        "symfony/framework-bundle": "^4.0",
-        "symfony/twig-bundle": "^4.0",
+        "php": ">=8.1",
+        "symfony/console": "^5.0|^6.0",
+        "symfony/event-dispatcher": "^5.0|^6.0",
+        "symfony/framework-bundle": "^5.0|^6.0",
+        "symfony/twig-bundle": "^5.0|^6.0",
         "doctrine/orm": ">=2.3.2",
         "doctrine/dbal": ">=2.3.2",
         "redcode/currency-rate": "0.2.*"
